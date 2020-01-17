@@ -1,0 +1,17 @@
+<div class="container">
+  <p>First ingredient</p>
+  <select [(ngModel)]="selectedProtein">
+    <option *ngFor = "let i1 of proteins" [value]="i1"> {{i1}} </option>
+  </select>
+
+  <p>Second ingredient</p>
+  <select [(ngModel)]="selectedVeg">
+    <option *ngFor="let i2 of veges" [value]="i2"> {{i2}} </option>
+  </select>
+  <br>
+  <button (click)="check()" class="cookButton">Cook</button>
+  <div class="result">
+    {{result}}
+  </div>
+</div>
+
